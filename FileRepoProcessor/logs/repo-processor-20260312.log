@@ -1,0 +1,50 @@
+2026-03-12 18:18:01 [INF] Worker started {"SourceContext":"FileRepoProcessor.Worker","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:52 [INF] Processing file C:\Users\sn\Repo\7 LAYOUT  dakshin puri banjara camp.dwg {"SourceContext":"FileRepoProcessor.Worker","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:52 [INF] [ProcessCAD] Key C:\Users\sn\Cache\7 LAYOUT  dakshin puri banjara camp_dwg\_x.txt does not exist. Processing normally  {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:52 [INF] [OCConvert] Into OCConver Function {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:52 [INF] [PostURI] Into PostURI for url: https://oc.wiseindex.app/files and Token number: df1dceb8e2d6f6b0894363b085801e36 {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:55 [INF] [PostURI] OK {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:56 [INF] [fetchOCFiles] Into OCFilesBinary for CAD thumbnail creation {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:56 [INF] [OCConvert] textdataRes = False, xdataRes = False, thumbRes = False; {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:56 [INF] [saveTFile] Timestamp file saved successfully at C:\Users\sn\Cache\7 LAYOUT  dakshin puri banjara camp_dwg\_T {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:56 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:57 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:18:59 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:00 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:01 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:02 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:03 [INF] [fetchOCFiles] Exceeded 10 attempts..
+Unable to fetch textdata at this moment... {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:03 [INF] [fetchOCFiles] Exceeded 10 attempts..
+Unable to fetch textdata at this moment... {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:03 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:05 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:06 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:09 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:10 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:11 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:12 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:14 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:15 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:16 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:17 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:19 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:20 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:21 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:22 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:24 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:25 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:26 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:28 [INF] [getOCFilesBinary] NotAcceptable {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:19:30 [INF] [fetchOCFiles] Thumbnail fetched successfully: OK {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:53:46 [INF] Worker started {"SourceContext":"FileRepoProcessor.Worker","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:52 [INF] Processing file C:\Users\sn\Repo\Dupe - Copy.dwg {"SourceContext":"FileRepoProcessor.Worker","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:53 [INF] [ProcessCAD] Key C:\Users\sn\Cache\Dupe - Copy_dwg\_x.txt does not exist. Processing normally  {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:53 [INF] [OCConvert] Into OCConver Function {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:53 [INF] [PostURI] Into PostURI for url: https://oc.wiseindex.app/files and Token number: df1dceb8e2d6f6b0894363b085801e36 {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:54 [INF] [PostURI] OK {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:56 [INF] [fetchOCFiles] Into OCFilesBinary for CAD thumbnail creation {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:54:56 [INF] [saveTFile] Timestamp file saved successfully at C:\Users\sn\Cache\Dupe - Copy_dwg\_T {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:55:06 [INF] [fetchOCFiles] Successfully fetched job file: xdata {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:55:09 [INF] [fetchOCFiles] Successfully fetched job file: textdata {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
+2026-03-12 18:55:11 [INF] [fetchOCFiles] Thumbnail fetched successfully: OK {"SourceContext":"FileRepoProcessor.FileProcessor","Application":"FileRepoProcessor","Environment":"Development"}
