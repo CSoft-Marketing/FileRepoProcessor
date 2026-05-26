@@ -30,10 +30,14 @@ namespace FileRepoProcessor
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                if (_queue.TryDequeue(out var file))
+                //if (_queue.TryDequeue(out var file))
+                //{
+                //    _logger.LogInformation("Processing file {File}", file);
+                //    await _processor.ProcessAsync(file, stoppingToken);
+                //}
+                if (_queue.TryDequeue(out var job))
                 {
-                    _logger.LogInformation("Processing file {File}", file);
-                    await _processor.ProcessAsync(file, stoppingToken);
+                    await _processor.ProcessAsync(job, stoppingToken);
                 }
                 else
                 {

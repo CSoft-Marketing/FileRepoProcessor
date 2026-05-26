@@ -31,7 +31,7 @@ namespace FileRepoProcessor
                 ".ppt", ".pptx",
                 ".pdf", 
                 ".dwg", ".dxf", ".dgn", ".ifc", ".obj", ".stl", ".stp",
-                ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp"
+                ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp", ".gif"
             };
         public void ScanAndEnqueue()
         {
@@ -42,7 +42,11 @@ namespace FileRepoProcessor
             foreach (var file in files)
             {
                 if (!_processor.IsProcessed(file))
-                    _queue.Enqueue(file);
+                    //_queue.Enqueue(file);
+                    _queue.Enqueue(new ProcessingJob
+                    {
+                        FilePath = file
+                    });
             }
         }
     }
