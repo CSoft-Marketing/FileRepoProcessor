@@ -53,9 +53,17 @@
           "dependencies": {
             "Magick.NET-Q16-AnyCPU": {
               "target": "Package",
-              "version": "[14.10.4, )"
+              "version": "[14.13.1, )"
             },
             "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting.Systemd": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting.WindowsServices": {
               "target": "Package",
               "version": "[6.0.1, )"
             },
@@ -73,11 +81,11 @@
             },
             "Serilog.Extensions.Hosting": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Serilog.Settings.Configuration": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Serilog.Sinks.Console": {
               "target": "Package",
@@ -89,7 +97,7 @@
             },
             "Spire.Officefor.NETStandard": {
               "target": "Package",
-              "version": "[9.12.0, )"
+              "version": "[11.4.0, )"
             }
           },
           "imports": [

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spire.Additions.Qt;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,20 @@ namespace FileRepoProcessor
     public interface IFileProcessor
     {
         bool IsProcessed(string repoFilePath);
-        Task ProcessAsync(string repoFilePath, CancellationToken token);
+        //Task ProcessAsync(string repoFilePath, CancellationToken token);
+        Task ProcessAsync(ProcessingJob job, CancellationToken token);
     }
     public interface IFileQueue
     {
-        void Enqueue(string path);
-        bool TryDequeue(out string path);
+        //void Enqueue(string path);
+        void Enqueue(ProcessingJob job);
+        //bool TryDequeue(out string path);
+        bool TryDequeue(out ProcessingJob job);
+    }
+
+    public interface IHtmlToPdfConverter
+    {
+        Stream Convert(HtmlToPdfRequest request);
+        bool ValidateChrome();
     }
 }

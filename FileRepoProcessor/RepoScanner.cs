@@ -26,12 +26,27 @@ namespace FileRepoProcessor
         private static readonly HashSet<string> AllowedExtensions =
             new(StringComparer.OrdinalIgnoreCase)
             {
-                ".doc", ".docx",
-                ".xls", ".xlsx",
-                ".ppt", ".pptx",
+                ".doc", ".docx",".dot", ".dotx", ".rtf", ".odt",
+                ".xls", ".xlsx", ".ods",
+                ".ppt", ".pptx", ".pps",".ppsx",".pot", ".potx",
                 ".pdf", 
                 ".dwg", ".dxf", ".dgn", ".ifc", ".obj", ".stl", ".stp",
-                ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp"
+                ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp", ".gif",
+
+                ".txt", ".text", ".csv", ".log", ".asc", ".tsv",
+                ".ini", ".cfg", ".config", ".properties", ".env",
+                ".json", ".xml", ".xaml", ".yaml", ".yml", ".md",
+                ".markdown", ".rst", ".tex", ".css", ".js", ".ts",
+                ".jsx", ".tsx", ".c", ".cpp", ".h", ".hpp", ".cs",
+                ".vb", ".java", ".kt", ".swift", ".go", ".py", ".rb",
+                ".php", ".pl", ".lua", ".r", ".m", ".scala",
+                ".groovy", ".dart", ".pas", ".f90", ".asm", ".s",
+                ".bat", ".cmd",".psl", ".sh", ".gitignore",
+                ".gitattributes", ".editorconfig", ".dockerignore",
+                ".npmrc", ".gitmodules",".csproj", ".vbproj", ".fsproj",
+                ".props", ".targets", ".sln", ".manifest",
+                ".htm", ".html", ".xhtml",
+                ".eml", ".msg"
             };
         public void ScanAndEnqueue()
         {
@@ -42,7 +57,11 @@ namespace FileRepoProcessor
             foreach (var file in files)
             {
                 if (!_processor.IsProcessed(file))
-                    _queue.Enqueue(file);
+                    //_queue.Enqueue(file);
+                    _queue.Enqueue(new ProcessingJob
+                    {
+                        FilePath = file
+                    });
             }
         }
     }
