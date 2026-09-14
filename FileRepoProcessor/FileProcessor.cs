@@ -528,6 +528,7 @@ namespace FileRepoProcessor
                 throw;
             }
         }
+
         public static void PrepareWorksheetForPdf(Worksheet worksheet)
         {
             if (worksheet == null) return;
@@ -567,7 +568,7 @@ namespace FileRepoProcessor
             // 3. Auto-fit content
             // -------------------------------
             worksheet.Range[$"A1:{endCell}"].AutoFitColumns();
-            
+
             for (int col = 1; col <= endCol; col++)
             {
                 double width = worksheet.GetColumnWidth(col);
@@ -605,35 +606,35 @@ namespace FileRepoProcessor
                 worksheet.PageSetup.PaperSize = PaperSizeType.A2Paper;
             }
 
-            
+
 
             worksheet.PageSetup.FitToPagesWide = 1;
             worksheet.PageSetup.FitToPagesTall = 0;
 
-            /*
-            if (isSmallSheet)
-            {
-                // Best case → single page
-                worksheet.PageSetup.FitToPagesWide = 1;
-                worksheet.PageSetup.FitToPagesTall = 0;  //initially 1
-            }
-            else if (isWideSheet)
-            {
-                // Fit width, allow vertical flow
-                worksheet.PageSetup.FitToPagesWide = 1;
-                worksheet.PageSetup.FitToPagesTall = 0;
-            }
-            else if (isLargeSheet)
-            {
-                // Too big → avoid shrinking too much
-                worksheet.PageSetup.FitToPagesWide = 1;
-                worksheet.PageSetup.FitToPagesTall = 0;
-            }
-            */
+
+            //if (isSmallSheet)
+            //{
+            //    // Best case → single page
+            //    worksheet.PageSetup.FitToPagesWide = 1;
+            //    worksheet.PageSetup.FitToPagesTall = 0;  //initially 1
+            //}
+            //else if (isWideSheet)
+            //{
+            //    // Fit width, allow vertical flow
+            //    worksheet.PageSetup.FitToPagesWide = 1;
+            //    worksheet.PageSetup.FitToPagesTall = 0;
+            //}
+            //else if (isLargeSheet)
+            //{
+            //    // Too big → avoid shrinking too much
+            //    worksheet.PageSetup.FitToPagesWide = 1;
+            //    worksheet.PageSetup.FitToPagesTall = 0;
+            //}
+
             // -------------------------------
             // 5. Improve readability
             // -------------------------------
-            worksheet.PageSetup.Orientation =  endCol <= 8
+            worksheet.PageSetup.Orientation = endCol <= 8
                 ? PageOrientationType.Portrait
                 : PageOrientationType.Landscape;
             worksheet.PageSetup.IsPrintGridlines = true;
@@ -647,6 +648,129 @@ namespace FileRepoProcessor
             worksheet.PageSetup.PrintTitleColumns = "";
         }
 
+
+        //public static void PrepareWorksheetForPdf(Worksheet worksheet)
+        //{
+        //    if (worksheet == null)
+        //        return;
+
+        //    int maxRow = worksheet.LastRow;
+        //    int maxCol = worksheet.LastColumn;
+
+        //    if (maxRow <= 0 || maxCol <= 0)
+        //        return;
+
+        //    // -----------------------------------------
+        //    // 1. Determine actual used range
+        //    // -----------------------------------------
+
+        //    int endRow = DetectEndRow(worksheet, maxRow, maxCol);
+        //    int endCol = DetectEndColumn(worksheet, maxRow, maxCol);
+
+        //    if (endRow == 0)
+        //        endRow = Math.Min(maxRow, 50);
+
+        //    if (endCol == 0)
+        //        endCol = Math.Min(maxCol, 10);
+
+        //    string endCell = ColumnIndexToName(endCol) + endRow;
+
+        //    // -----------------------------------------
+        //    // 2. Print area
+        //    // -----------------------------------------
+
+        //    worksheet.PageSetup.PrintArea = $"A1:{endCell}";
+
+        //    var usedRange = worksheet.Range[$"A1:{endCell}"];
+
+        //    // -----------------------------------------
+        //    // 3. Cell formatting
+        //    // -----------------------------------------
+
+        //    usedRange.Style.WrapText = true;
+        //    usedRange.Style.VerticalAlignment =
+        //        VerticalAlignType.Top;
+
+        //    // IMPORTANT:
+        //    // Do NOT AutoFitColumns()
+        //    //
+        //    // We want to preserve the actual Excel
+        //    // column widths.
+
+        //    // -----------------------------------------
+        //    // 4. Determine worksheet width
+        //    // -----------------------------------------
+
+        //    double totalColumnWidth = 0;
+
+        //    for (int col = 1; col <= endCol; col++)
+        //    {
+        //        totalColumnWidth += worksheet.GetColumnWidth(col);
+        //    }
+
+        //    // -----------------------------------------
+        //    // 5. Determine worksheet height
+        //    // -----------------------------------------
+
+        //    usedRange.AutoFitRows();
+
+        //    double totalRowHeight = 0;
+
+        //    for (int row = 1; row <= endRow; row++)
+        //    {
+        //        totalRowHeight += worksheet.GetRowHeight(row);
+        //    }
+
+        //    // -----------------------------------------
+        //    // 6. Convert Excel dimensions
+        //    //    to approximate millimeters
+        //    // -----------------------------------------
+
+        //    double widthMm = ConvertExcelWidthToMm(totalColumnWidth);
+        //    double heightMm = ConvertExcelHeightToMm(totalRowHeight);
+
+        //    // Add margins
+        //    const double horizontalMarginMm = 8;
+        //    const double verticalMarginMm = 8;
+
+        //    widthMm += horizontalMarginMm * 2;
+        //    heightMm += verticalMarginMm * 2;
+
+        //    // -----------------------------------------
+        //    // 7. Minimum page height
+        //    // -----------------------------------------
+
+        //    const double minimumHeightMm = 297;
+
+        //    if (heightMm < minimumHeightMm)
+        //        heightMm = minimumHeightMm;
+
+        //    // -----------------------------------------
+        //    // 8. Custom paper size
+        //    // -----------------------------------------
+
+        //    //worksheet.PageSetup.SetCustomPaperSize(
+        //    //    (float)widthMm,
+        //    //    (float)heightMm);
+        //    worksheet.PageSetup.PaperSize = PaperSizeType.Custom; 
+              
+        //    // -----------------------------------------
+        //    // 9. Page setup
+        //    // -----------------------------------------
+
+        //    worksheet.PageSetup.Zoom = 100;
+
+        //    worksheet.PageSetup.Orientation =
+        //        PageOrientationType.Landscape;
+
+        //    worksheet.PageSetup.IsPrintGridlines = true;
+        //    worksheet.PageSetup.IsPrintHeadings = true;
+
+        //    worksheet.PageSetup.LeftMargin = 0.3;
+        //    worksheet.PageSetup.RightMargin = 0.3;
+        //    worksheet.PageSetup.TopMargin = 0.3;
+        //    worksheet.PageSetup.BottomMargin = 0.3;
+        //}
         private static worksheetDimension getWorksheetDimensions(Worksheet worksheet, int endRow, int endCol)
         {
             double totalWidth = 0;
@@ -1029,7 +1153,7 @@ namespace FileRepoProcessor
                 //    pdfStream.Position = 0;
                 //    pdfStream.CopyTo(file);
                 //}
-                
+
                 // XOR the PDF stream
                 using var xorStream = new MemoryStream();
                 XorStream(pdfStream, xorStream, 0xAA);
@@ -1063,13 +1187,33 @@ namespace FileRepoProcessor
             html.AppendLine("<head>");
             html.AppendLine("<meta charset=\"utf-8\"/>");
 
+            //html.AppendLine("<style>");
+            //html.AppendLine("body{font-family:Arial,Helvetica,sans-serif;font-size:14px;margin:30px;}");
+            //html.AppendLine("table{width:100%;border-collapse:collapse;}");
+            //html.AppendLine("td{padding:4px;vertical-align:top;}");
+            //html.AppendLine("hr{margin-top:15px;margin-bottom:15px;}");
+            //html.AppendLine(".header{background:#f3f3f3;padding:10px;border:1px solid #ddd;}");
+            //html.AppendLine(".attachments{margin-top:15px;}");
+            //html.AppendLine("</style>");
+
             html.AppendLine("<style>");
-            html.AppendLine("body{font-family:Arial,Helvetica,sans-serif;font-size:14px;margin:30px;}");
+            html.AppendLine("body{font-family:Arial,Helvetica,sans-serif;font-size:14px;margin:30px;overflow-wrap:break-word;}");
+
             html.AppendLine("table{width:100%;border-collapse:collapse;}");
             html.AppendLine("td{padding:4px;vertical-align:top;}");
             html.AppendLine("hr{margin-top:15px;margin-bottom:15px;}");
+
             html.AppendLine(".header{background:#f3f3f3;padding:10px;border:1px solid #ddd;}");
             html.AppendLine(".attachments{margin-top:15px;}");
+
+            html.AppendLine(".email-body{max-width:100%;overflow:hidden;}");
+
+            html.AppendLine(".email-body img{max-width:100% !important;height:auto !important;}");
+            html.AppendLine(".email-body svg{max-width:100% !important;height:auto !important;}");
+            html.AppendLine(".email-body table{max-width:100% !important;table-layout:auto;}");
+            html.AppendLine(".email-body pre{white-space:pre-wrap;word-break:break-word;}");
+            html.AppendLine(".email-body *{max-width:100%;}");
+
             html.AppendLine("</style>");
 
             html.AppendLine("</head>");
@@ -1132,7 +1276,10 @@ namespace FileRepoProcessor
 
             if (!string.IsNullOrWhiteSpace(message.BodyHtml))
             {
+                //html.AppendLine(message.BodyHtml);
+                html.AppendLine("<div class='email-body'>");
                 html.AppendLine(message.BodyHtml);
+                html.AppendLine("</div>");
             }
             else
             {
