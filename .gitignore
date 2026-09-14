@@ -18,9 +18,13 @@ Desktop.ini
 Dependencies/
 LoadBalancer/
 SizeReducer/
+logs/
 
 # Plugin folders
 FileRepoProcessor/plugin_linux/
 FileRepoProcessor/plugin_mac/
 FileRepoProcessor/plugin_windows/
 FileRepoProcessor/plugin_windows1/
+
+# Docker Files
+.dockerignore

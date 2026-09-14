@@ -92,8 +92,8 @@ namespace FileRepoProcessor
                 ".bat", ".cmd",".psl", ".sh", ".gitignore",
                 ".gitattributes", ".editorconfig", ".dockerignore",
                 ".npmrc", ".gitmodules",".csproj", ".vbproj", ".fsproj",
-                ".props", ".targets", ".sln", ".manifest",
-                ".htm", ".html"
+                ".props", ".targets", ".sln", ".manifest"
+                
             };
         // ...
     }
